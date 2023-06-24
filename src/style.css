@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+p {
+  margin: 0;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 500px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+form {
+  display: flex;
+  margin-bottom: 20px;
+}
+button {
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  padding: 5px 15px;
+  border:0;
+  border-radius: 5px;
+  margin:0 3px;
+}
+.add {
+  background: #82bff1;
+}
+.edit {
+    background: #82bff1;
+}
+.delete {
+    background: #ad3030;
+}
+.save {
+  background: #33d9b2
+}
+.cancel {
+  background: #ff793f;
+}
+.edit {
+  background: #82bff1;
+}
+input {
+  padding: 8px 15px;
+  outline: 0;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+}
+form input {
+  flex: 1;
+  margin-right: 15px;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+li {
+  display: flex;
+  align-items: center;
+  padding: 15px 3px;
+}
+li input {
+  flex: 1;
+}
+li p {
+  flex: 1;
+  align-items: center;
+}
+li .todo {
+  flex: 0 0 20px;
+  height: 20px;
+  border-radius: 30px;
+  margin-right: 15px;
+  border: 2px solid #333;
+}
+li .todo.done {
+  background: #333;
+}
+
+.dark-mode {
+  background-color: #222;
+  color: #fff;
+
+}
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.dark-mode-toggle.active {
+  background-color: #999;
+}
+
+.dark-mode-toggle:before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode .dark-mode-toggle:before {
+  transform: translateX(20px);
+}
+
+
+li.shake {
+  animation: shake 0.4s linear;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
